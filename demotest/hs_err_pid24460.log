@@ -1,0 +1,201 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes for Failed to commit area from 0x00000000e0000000 to 0x00000000efe00000 of length 266338304.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3388), pid=24460, tid=19972
+#
+# JRE version:  (11.0.23+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.23+9-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.gradle.internal.worker.tmpdir=C:\Users\Rencal\IdeaProjects\demotest\build\tmp\test\work -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=x-windows-949 -Duser.country=KR -Duser.language=ko -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+
+Host: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3430)
+Time: Thu Apr 18 15:47:30 2024  Windows 11 , 64 bit Build 22621 (10.0.22621.3430) elapsed time: 0.011836 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c590f36800):  JavaThread "Unknown thread" [_thread_in_vm, id=19972, stack(0x00000097a8a00000,0x00000097a8b00000)]
+
+Stack: [0x00000097a8a00000,0x00000097a8b00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x645c0a]
+V  [jvm.dll+0x7d9fe9]
+V  [jvm.dll+0x7db6e9]
+V  [jvm.dll+0x7dbdd3]
+V  [jvm.dll+0x2696b5]
+V  [jvm.dll+0x642e29]
+V  [jvm.dll+0x637375]
+V  [jvm.dll+0x3256bc]
+V  [jvm.dll+0x325542]
+V  [jvm.dll+0x32a116]
+V  [jvm.dll+0x372592]
+V  [jvm.dll+0x371ff1]
+V  [jvm.dll+0x300df8]
+V  [jvm.dll+0x301ef5]
+V  [jvm.dll+0x7b3127]
+V  [jvm.dll+0x7b48ef]
+V  [jvm.dll+0x37f9b9]
+V  [jvm.dll+0x79528f]
+V  [jvm.dll+0x3f0307]
+V  [jvm.dll+0x3f2871]
+C  [jli.dll+0x52ef]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa48]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001c590e24a80, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001c590f51000 GCTaskThread "GC Thread#0" [stack: 0x00000097a8b00000,0x00000097a8c00000] [id=4296]
+  0x000001c590f62000 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000097a8c00000,0x00000097a8d00000] [id=23760]
+  0x000001c590f63800 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000097a8d00000,0x00000097a8e00000] [id=22108]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffb17ec1837]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001c590f32a10] Heap_lock - owner thread: 0x000001c590f36800
+
+Heap address: 0x00000000e0000000, size: 512 MB, Compressed Oops mode: Non-zero based: 0x00000000e0000000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.007 Loaded shared library C:\Users\Rencal\.jdks\corretto-11.0.23\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff76a650000 - 0x00007ff76a65e000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\java.exe
+0x00007ffb96210000 - 0x00007ffb96427000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffb95980000 - 0x00007ffb95a44000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffb93a70000 - 0x00007ffb93e1b000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffb936a0000 - 0x00007ffb937b1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffb89120000 - 0x00007ffb89137000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\jli.dll
+0x00007ffb882e0000 - 0x00007ffb882fb000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\VCRUNTIME140.dll
+0x00007ffb955f0000 - 0x00007ffb9579e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffb84b20000 - 0x00007ffb84db3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3430_none_270fe68173859015\COMCTL32.dll
+0x00007ffb93f10000 - 0x00007ffb93f36000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffb95e40000 - 0x00007ffb95ee7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffb94cc0000 - 0x00007ffb94ce9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffb93950000 - 0x00007ffb93a69000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffb937c0000 - 0x00007ffb9385a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffb952c0000 - 0x00007ffb952f1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffb89150000 - 0x00007ffb8915c000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\vcruntime140_1.dll
+0x00007ffb81140000 - 0x00007ffb811cd000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\msvcp140.dll
+0x00007ffb17bb0000 - 0x00007ffb18774000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\server\jvm.dll
+0x00007ffb95300000 - 0x00007ffb953b2000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffb95ae0000 - 0x00007ffb95b88000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffb93e20000 - 0x00007ffb93e48000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffb95ef0000 - 0x00007ffb96005000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffb94830000 - 0x00007ffb94838000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffb88cd0000 - 0x00007ffb88cd9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffb88870000 - 0x00007ffb888a4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffb87140000 - 0x00007ffb8714a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffb947b0000 - 0x00007ffb94821000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffb92630000 - 0x00007ffb92648000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffb88b30000 - 0x00007ffb88b40000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\verify.dll
+0x00007ffb8ddc0000 - 0x00007ffb8dff3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffb94d50000 - 0x00007ffb950d8000 	C:\WINDOWS\System32\combase.dll
+0x00007ffb951e0000 - 0x00007ffb952b7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffb869f0000 - 0x00007ffb86a22000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffb938d0000 - 0x00007ffb93949000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffb88280000 - 0x00007ffb882a8000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\java.dll
+0x00007ffb88a60000 - 0x00007ffb88a6a000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\jimage.dll
+0x00007ffb88250000 - 0x00007ffb88268000 	C:\Users\Rencal\.jdks\corretto-11.0.23\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Rencal\.jdks\corretto-11.0.23\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3430_none_270fe68173859015;C:\Users\Rencal\.jdks\corretto-11.0.23\bin\server
+
+VM Arguments:
+jvm_args: -Dorg.gradle.internal.worker.tmpdir=C:\Users\Rencal\IdeaProjects\demotest\build\tmp\test\work -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=x-windows-949 -Duser.country=KR -Duser.language=ko -Duser.variant -ea 
+java_command: worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 2'
+java_class_path (initial): C:\\Users\\Rencal\\.gradle\\caches\\8.2\\workerMain\\gradle-worker.jar;C:\\Users\\Rencal\\IdeaProjects\\demotest\\build\\classes\\java\\test;C:\\Users\\Rencal\\IdeaProjects\\demotest\\build\\classes\\java\\main;C:\\Users\\Rencal\\IdeaProjects\\demotest\\build\\resources\\main;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-context\\5.3.34\\8edb5f9e1e0d7fba07ef98305869152704708d5c\\spring-context-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-test\\5.3.34\\a26a8ae7403e6ef3fa233b4d6bc15e2661e8b0f2\\spring-test-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-aop\\5.3.34\\9c4d3635d5cde8cd528f87cc6ad8864a193c438a\\spring-aop-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-beans\\5.3.34\\54324e277a95b702b8cc149ed2c8618bc497e40d\\spring-beans-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-expression\\5.3.34\\6aca881637b66b29024814c6daeee1637502ede0\\spring-expression-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-core\\5.3.34\\43f5c060370afaebd3c2eff604dfba4069e3b39f\\spring-core-5.3.34.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-slf4j-impl\\2.23.1\\9ef67909a1b4eae999af4c7a211ab2379e4b86c2\\log4j-slf4j-impl-2.23.1.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-core\\2.23.1\\905802940e2c78042d75b837c136ac477d2b4e4d\\log4j-core-2.23.1.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.logging.log4j\\log4j-api\\2.23.1\\9c15c29c526d9c6783049c0a77722693c66706e1\\log4j-api-2.23.1.jar;C:\\Users\\Rencal\\.gradle\\caches\\modules-2\\files-2.1\\jstl\\jstl\\1.2\\74aca283cd4f4b4f3e425f5820cda58f44409547\\jstl-1.2.jar;C:\\Users\\Rencal\\.gradle\\caches\\module
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 536870912                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Amazon Corretto\jdk17.0.10_7
+PATH=C:\Program Files\Amazon Corretto\jdk17.0.10_7\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Amazon Corretto\jdk17.0.10_7\bin;C:\Program Files (x86)\Windows Live\Shared;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Amazon Corretto\jdk17.0.10_7\bin;C:\Program Files\Docker\Docker\resources\bin;C:\tools\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Rencal\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\Rencal\AppData\Local\Microsoft\WindowsApps;C:\Users\Rencal\AppData\Roaming\npm;C:\Users\Rencal\AppData\Local\GitHubDesktop\bin;C:\Users\Rencal\AppData\Local\atom\bin;C:\Users\Rencal\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.5\bin;
+USERNAME=Rencal
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+TMP=C:\Users\Rencal\AppData\Local\Temp
+TEMP=C:\Users\Rencal\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.3430)
+OS uptime: 0 days 22:43 hours
+Hyper-V role detected
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12 microcode 0xde, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 16182M (2293M free)
+TotalPageFile size 24366M (AvailPageFile size 138M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 59M, peak: 313M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.23+9-LTS) for windows-amd64 JRE (11.0.23+9-LTS), built on Apr 10 2024 18:40:41 by "Administrator" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
